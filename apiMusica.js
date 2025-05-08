@@ -66,7 +66,6 @@ app.get("/songs", async (req, res) => {
       id: file.id,
       name: file.name.replace(".opus", ""),
       url:`https://servidor-canciones-6tra.onrender.com/stream/${file.id}`,
-`,
     }));
 
     res.json(songs);
