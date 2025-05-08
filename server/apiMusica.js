@@ -9,7 +9,7 @@ const cors = require("cors");
 // Se crea una instancia de Express
 const app = express();
 // Se define el puerto en el que se ejecutara el servidor
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // ======================================
 // CONFIGURACIÓN GOOGLE DRIVE
