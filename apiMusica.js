@@ -76,7 +76,7 @@ app.get("/songs", async (req, res) => {
 });
 
 // Stream de audio desde Google Drive
-app.get("/stream/:fileId", async (req, res) => {
+app.get("/:fileId", async (req, res) => {
   try {
     const { fileId } = req.params;
 
