@@ -21,9 +21,10 @@ const FOLDER_ID = "1Cu4ZmP17u6l9ZsrZBzYtJ_sAbMm9Gezp"; // Id de la carpeta donde
 
 // Autenticación con Google Drive usando credenciales
 const auth = new google.auth.GoogleAuth({
-  credentials: JSON.parse(fs.readFileSync(GOOGLE_CREDENTIALS)),
+  credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS),
   scopes: SCOPES,
 });
+
 
 // Instancia de la API de Drive (v3)
 const drive = google.drive({ version: "v3", auth });
