@@ -1,4 +1,5 @@
 // Dependencias
+require("dotenv").config();
 const express = require("express");
 const { google } = require("googleapis");
 const path = require("path");
@@ -21,7 +22,7 @@ const FOLDER_ID = "1Cu4ZmP17u6l9ZsrZBzYtJ_sAbMm9Gezp"; // Id de la carpeta donde
 
 // Autenticación con Google Drive usando credenciales
 const auth = new google.auth.GoogleAuth({
-  credentials: JSON.parse(fs.readFileSync(CREDENTIALS_PATH)),
+  credentials: JSON.parse(fs.readFileSync(GOOGLE_CREDENTIALS)),
   scopes: SCOPES,
 });
 
