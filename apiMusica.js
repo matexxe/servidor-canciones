@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 3000;
 // CONFIGURACIÓN GOOGLE DRIVE
 // ======================================
 // Ruta del archivo de credenciales
-const CREDENTIALS_PATH = path.join(__dirname, "google-credentials.json");
+const GOOGLE_CREDENTIALS = path.join(__dirname, "google-credentials.json");
 const SCOPES = ["https://www.googleapis.com/auth/drive.readonly"]; // Permiso de solo lectura
 const FOLDER_ID = "1Cu4ZmP17u6l9ZsrZBzYtJ_sAbMm9Gezp"; // Id de la carpeta donde estan los archivos
 
