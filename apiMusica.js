@@ -65,7 +65,8 @@ app.get("/songs", async (req, res) => {
     const songs = response.data.files.map((file) => ({
       id: file.id,
       name: file.name.replace(".opus", ""),
-      url: `/stream/${file.id}`,
+      url:`https://servidor-canciones-6tra.onrender.com/stream/${file.id}`,
+`,
     }));
 
     res.json(songs);
